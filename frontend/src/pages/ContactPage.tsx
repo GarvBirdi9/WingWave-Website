@@ -137,7 +137,7 @@ export default function ContactPage() {
                     <Mail className="h-6 w-6 text-primary" />
                   </div>
                   <CardTitle className="font-mono text-lg">Email</CardTitle>
-                  <CardDescription>info@wingwave-tech.com</CardDescription>
+                  <CardDescription>tech.wingwave@gmail.com</CardDescription>
                 </CardHeader>
               </Card>
 
@@ -147,7 +147,7 @@ export default function ContactPage() {
                     <Phone className="h-6 w-6 text-primary" />
                   </div>
                   <CardTitle className="font-mono text-lg">Phone</CardTitle>
-                  <CardDescription>+1 (555) 123-4567</CardDescription>
+                  <CardDescription>(+91) - 9953634346</CardDescription>
                 </CardHeader>
               </Card>
 
@@ -160,9 +160,9 @@ export default function ContactPage() {
                     Headquarters
                   </CardTitle>
                   <CardDescription>
-                    Secure Location
+                    New Delhi
                     <br />
-                    Authorized Personnel Only
+                    
                   </CardDescription>
                 </CardHeader>
               </Card>

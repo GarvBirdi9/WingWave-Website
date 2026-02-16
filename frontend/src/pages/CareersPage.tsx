@@ -162,164 +162,10 @@ export default function CareersPage() {
         </div>
       </section>
 
-      {/* Open Positions */}
-      <section className="bg-muted/30 py-20">
-        <div className="container">
-          <div className="mx-auto max-w-2xl text-center mb-16">
-            <h2 className="font-mono text-3xl font-bold tracking-tight sm:text-4xl mb-4">
-              Open Positions
-            </h2>
-            <p className="font-mono text-lg text-muted-foreground">
-              Explore opportunities across engineering, research, and operations
-            </p>
-          </div>
-
-          <div className="mx-auto max-w-4xl space-y-6">
-            <Card className="transition-all hover:shadow-lg">
-              <CardHeader>
-                <div className="flex items-start justify-between">
-                  <div className="space-y-2">
-                    <CardTitle className="font-mono text-2xl">
-                      Senior Aerospace Engineer
-                    </CardTitle>
-                    <CardDescription>
-                      Engineering · Full-time · On-site
-                    </CardDescription>
-                  </div>
-                  <Badge>Open</Badge>
-                </div>
-              </CardHeader>
-              <CardContent>
-                <p className="text-sm text-muted-foreground mb-4">
-                  Lead the design and development of next-generation UAS
-                  platforms. Requires extensive experience in aerospace
-                  engineering and autonomous systems.
-                </p>
-                <div className="flex flex-wrap gap-2">
-                  <Badge variant="secondary">Aerospace</Badge>
-                  <Badge variant="secondary">CAD/CAM</Badge>
-                  <Badge variant="secondary">Flight Dynamics</Badge>
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card className="transition-all hover:shadow-lg">
-              <CardHeader>
-                <div className="flex items-start justify-between">
-                  <div className="space-y-2">
-                    <CardTitle className="font-mono text-2xl">
-                      AI/ML Research Scientist
-                    </CardTitle>
-                    <CardDescription>
-                      Research & Development · Full-time · Hybrid
-                    </CardDescription>
-                  </div>
-                  <Badge>Open</Badge>
-                </div>
-              </CardHeader>
-              <CardContent>
-                <p className="text-sm text-muted-foreground mb-4">
-                  Develop advanced machine learning algorithms for autonomous
-                  navigation and target recognition. PhD in Computer Science or
-                  related field preferred.
-                </p>
-                <div className="flex flex-wrap gap-2">
-                  <Badge variant="secondary">Machine Learning</Badge>
-                  <Badge variant="secondary">Computer Vision</Badge>
-                  <Badge variant="secondary">Python</Badge>
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card className="transition-all hover:shadow-lg">
-              <CardHeader>
-                <div className="flex items-start justify-between">
-                  <div className="space-y-2">
-                    <CardTitle className="font-mono text-2xl">
-                      Embedded Systems Engineer
-                    </CardTitle>
-                    <CardDescription>
-                      Engineering · Full-time · On-site
-                    </CardDescription>
-                  </div>
-                  <Badge>Open</Badge>
-                </div>
-              </CardHeader>
-              <CardContent>
-                <p className="text-sm text-muted-foreground mb-4">
-                  Design and implement real-time embedded systems for flight
-                  control and sensor integration. Experience with
-                  safety-critical systems required.
-                </p>
-                <div className="flex flex-wrap gap-2">
-                  <Badge variant="secondary">C/C++</Badge>
-                  <Badge variant="secondary">RTOS</Badge>
-                  <Badge variant="secondary">Hardware Integration</Badge>
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card className="transition-all hover:shadow-lg">
-              <CardHeader>
-                <div className="flex items-start justify-between">
-                  <div className="space-y-2">
-                    <CardTitle className="font-mono text-2xl">
-                      Flight Test Engineer
-                    </CardTitle>
-                    <CardDescription>
-                      Operations · Full-time · On-site
-                    </CardDescription>
-                  </div>
-                  <Badge>Open</Badge>
-                </div>
-              </CardHeader>
-              <CardContent>
-                <p className="text-sm text-muted-foreground mb-4">
-                  Plan and execute flight test programs to validate system
-                  performance. Remote pilot certification and test engineering
-                  experience required.
-                </p>
-                <div className="flex flex-wrap gap-2">
-                  <Badge variant="secondary">Flight Testing</Badge>
-                  <Badge variant="secondary">Data Analysis</Badge>
-                  <Badge variant="secondary">Remote Pilot</Badge>
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card className="transition-all hover:shadow-lg">
-              <CardHeader>
-                <div className="flex items-start justify-between">
-                  <div className="space-y-2">
-                    <CardTitle className="font-mono text-2xl">
-                      Cybersecurity Specialist
-                    </CardTitle>
-                    <CardDescription>
-                      Security · Full-time · Hybrid
-                    </CardDescription>
-                  </div>
-                  <Badge>Open</Badge>
-                </div>
-              </CardHeader>
-              <CardContent>
-                <p className="text-sm text-muted-foreground mb-4">
-                  Ensure the security of our systems against cyber threats.
-                  Experience with defense systems and security clearance
-                  required.
-                </p>
-                <div className="flex flex-wrap gap-2">
-                  <Badge variant="secondary">Cybersecurity</Badge>
-                  <Badge variant="secondary">Penetration Testing</Badge>
-                  <Badge variant="secondary">ITAR</Badge>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
+      
 
       {/* Application Form */}
-      <section className="py-20">
+      <section className="py-15">
         <div className="container">
           <div className="mx-auto max-w-2xl">
             <div className="text-center mb-12">
@@ -342,7 +188,7 @@ export default function CareersPage() {
                         name="name"
                         value={formData.name}
                         onChange={handleChange}
-                        placeholder="John Doe"
+                        placeholder=""
                         required
                       />
                     </div>
@@ -354,7 +200,7 @@ export default function CareersPage() {
                         type="email"
                         value={formData.email}
                         onChange={handleChange}
-                        placeholder="john.doe@example.com"
+                        placeholder=""
                         required
                       />
                     </div>
