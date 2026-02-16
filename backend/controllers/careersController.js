@@ -1,31 +1,73 @@
-import {saveToExcel} from '../utils/excel.js';
+import { sendNotification } from "../utils/mailer.js";
 
-export const submitCareerApplication = (req, res) => {
+export const submitCareerApplication = async (req, res) => {
   console.log("📩 CAREER HIT");
   console.log(req.body);
+
   const { name, email, resumeLink, position, coverLetter } = req.body;
 
-  if (!name || !email || !resumeLink) {
-    return res.status(400).json({ error: "Required fields missing" });
+  // Basic validation
+  if (!name || !email || !position) {
+    return res.status(400).json({
+      success: false,
+      error: "Required fields missing",
+    });
   }
 
-  console.log("💼 New Career Application:", {
-    name,
-    email,
-    position,
-    resumeLink,
-    coverLetter,
-  });
-
   try {
-    saveToExcel('career_applications.xlsx', req.body);
+    console.log("💼 New Career Application:", {
+      name,
+      email,
+      position,
+      resumeLink,
+      coverLetter,
+    });
+
+    const textContent = `
+WINGWAVE TECHNOLOGIES
+--------------------------------------------------
+
+New Career Application Received
+
+Position Applied : ${position}
+
+--------------------------------------------------
+APPLICANT DETAILS
+--------------------------------------------------
+
+Name             : ${name}
+Email            : ${email}
+Resume Link      : ${resumeLink || "Not Provided"}
+
+--------------------------------------------------
+COVER LETTER
+--------------------------------------------------
+
+${coverLetter || "Not Provided"}
+
+--------------------------------------------------
+
+Submitted At     : ${new Date().toLocaleString()}
+
+This is an automated notification from the Wingwave Technologies website.
+`;
+
+    await sendNotification(
+      `[Wingwave] Career Application - ${position}`,
+      textContent
+    );
 
     return res.status(200).json({
       success: true,
-      message: 'Career application saved',
+      message: "Career application submitted successfully",
     });
+
   } catch (error) {
-    console.error(error);
-    return res.status(500).json({ success: false });
+    console.error("❌ Error sending career email:", error);
+
+    return res.status(500).json({
+      success: false,
+      error: "Something went wrong. Please try again later.",
+    });
   }
 };
