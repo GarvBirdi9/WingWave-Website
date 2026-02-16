@@ -48,13 +48,16 @@ export default function ContactPage() {
     setIsSubmitting(true);
 
     try {
-      const res = await fetch("/api/contact", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
+      const res = await fetch(
+        "https://wingwave-backend.onrender.com/api/contact",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
         },
-        body: JSON.stringify(formData),
-      });
+      );
 
       if (!res.ok) {
         throw new Error("Failed to submit");
@@ -162,7 +165,6 @@ export default function ContactPage() {
                   <CardDescription>
                     New Delhi
                     <br />
-                    
                   </CardDescription>
                 </CardHeader>
               </Card>

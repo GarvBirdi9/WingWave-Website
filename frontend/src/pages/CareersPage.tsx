@@ -35,13 +35,16 @@ export default function CareersPage() {
     setIsSubmitting(true);
 
     try {
-      const res = await fetch("/api/careers", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
+      const res = await fetch(
+        "https://wingwave-backend.onrender.com/api/careers",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
         },
-        body: JSON.stringify(formData),
-      });
+      );
 
       if (!res.ok) {
         throw new Error("Failed to submit application");
@@ -161,8 +164,6 @@ export default function CareersPage() {
           </div>
         </div>
       </section>
-
-      
 
       {/* Application Form */}
       <section className="py-15">
