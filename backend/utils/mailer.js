@@ -1,19 +1,11 @@
-import nodemailer from "nodemailer";
+import { Resend } from "resend";
+
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 export const sendNotification = async (subject, text) => {
   try {
-    const transporter = nodemailer.createTransport({
-      host: "smtp.gmail.com",
-      port: 465,
-      secure: true, // SSL
-      auth: {
-        user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_PASS,
-      },
-    });
-
-    await transporter.sendMail({
-      from: `"Wingwave Website" <${process.env.EMAIL_USER}>`,
+    await resend.emails.send({
+      from: "Wingwave Website <onboarding@resend.dev>",
       to: process.env.RECEIVER_EMAIL,
       subject: subject,
       text: text,
