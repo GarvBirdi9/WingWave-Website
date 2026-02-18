@@ -36,7 +36,7 @@ export default function CareersPage() {
 
     try {
       const res = await fetch(
-        "https://wingwave-backend.onrender.com/api/careers",
+        "https://wingwave-website-production.up.railway.app/api/careers",
         {
           method: "POST",
           headers: {

@@ -49,7 +49,7 @@ export default function ContactPage() {
 
     try {
       const res = await fetch(
-        "https://wingwave-backend.onrender.com/api/contact",
+        "https://wingwave-website-production.up.railway.app/api/contact",
         {
           method: "POST",
           headers: {
