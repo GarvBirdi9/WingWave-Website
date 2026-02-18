@@ -52,6 +52,9 @@ export default function CareersPage() {
 
       toast.success(
         "Application submitted successfully! We will review your application and contact you soon.",
+        {
+          className: "bg-green-600 text-white border border-green-600",
+        },
       );
 
       setFormData({

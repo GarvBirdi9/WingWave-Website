@@ -203,7 +203,7 @@ export default function ContactPage() {
                           name="name"
                           value={formData.name}
                           onChange={handleChange}
-                          placeholder="John Doe"
+                          placeholder=""
                           required
                         />
                       </div>
@@ -215,7 +215,7 @@ export default function ContactPage() {
                           type="email"
                           value={formData.email}
                           onChange={handleChange}
-                          placeholder="john.doe@example.com"
+                          placeholder=""
                           required
                         />
                       </div>
