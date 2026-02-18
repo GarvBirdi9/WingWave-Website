@@ -50,7 +50,7 @@ ${message}
 
 --------------------------------------------------
 
-Submitted At : ${new Date().toLocaleString()}
+Submitted At     : ${new Date().toLocaleString("en-IN", { timeZone: "Asia/Kolkata" })}
 
 This is an automated notification from the Wingwave Technologies website.
 `;

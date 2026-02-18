@@ -47,21 +47,21 @@ ${coverLetter || "Not Provided"}
 
 --------------------------------------------------
 
-Submitted At     : ${new Date().toLocaleString()}
+Submitted At     : ${new Date().toLocaleString("en-IN", { timeZone: "Asia/Kolkata" })}
+
 
 This is an automated notification from the Wingwave Technologies website.
 `;
 
     await sendNotification(
       `[Wingwave] Career Application - ${position}`,
-      textContent
+      textContent,
     );
 
     return res.status(200).json({
       success: true,
       message: "Career application submitted successfully",
     });
-
   } catch (error) {
     console.error("❌ Error sending career email:", error);
 
